@@ -25,3 +25,11 @@ export interface Team {
     createdAt: Date;
     updatedAt: Date;
 }
+
+
+export interface AuthContextType{
+    user:User | null;
+    login: (formData: FormData) => void;  //which is going to accept (form-data) and return void
+    logout: ()=> void
+    hasPermission: (userRole:Role) => void
+}
